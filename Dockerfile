@@ -1,8 +1,6 @@
 ARG RVERSION=4.4.2
 FROM rocker/r-ver:$RVERSION
 
-ENV DEBIAN_FRONTEND=noninteractive
-
 # Install system dependencies
 RUN apt-get update -qq \
   && apt-get install --yes \
@@ -13,20 +11,27 @@ RUN apt-get update -qq \
     sudo \
   && rm -rf /var/lib/apt/lists/*
 
-# Remove examples
-WORKDIR /srv/shiny-server
-RUN rm -rf *
+# Install brave-browser required for shinytest2
+RUN curl -fsS https://dl.brave.com/install.sh | sh
 
-# Install R dependencies
-COPY --chown=shiny:shiny .Rprofile renv.lock ./
-COPY --chown=shiny:shiny renv/activate.R renv/
-RUN sudo -u shiny Rscript -e 'renv::restore(clean = TRUE)'
+# Run application as 'app' user.
+RUN addgroup --system app && adduser --system --ingroup app app
+RUN mkdir /home/app
+RUN chown app:app /home/app
+ENV HOME=/home/app
+WORKDIR /home/app
 
 # Copy app
-COPY --chown=shiny:shiny app.R ./
-COPY --chown=shiny:shiny config.yml ./
-COPY --chown=shiny:shiny rhino.yml ./
-COPY --chown=shiny:shiny app app/
+COPY --chown=app:app app.R ./
+COPY --chown=app:app config.yml ./
+COPY --chown=app:app rhino.yml ./
+COPY --chown=app:app app app/
 
-COPY --chown=shiny:shiny docker/shiny-server.conf /etc/shiny-server/
-USER shiny
+# Install R dependencies
+COPY --chown=app:app .Rprofile renv.lock ./
+COPY --chown=app:app renv/activate.R renv/
+RUN sudo -u app Rscript -e 'renv::restore(clean = TRUE)'
+
+# Expose port and run shiny application
+USER app
+EXPOSE 9001
