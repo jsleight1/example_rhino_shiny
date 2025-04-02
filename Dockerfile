@@ -10,6 +10,7 @@ RUN apt-get update -qq \
     libgdal-dev \
     libproj-dev \
     libudunits2-dev \
+    sudo \
   && rm -rf /var/lib/apt/lists/*
 
 # Remove examples
