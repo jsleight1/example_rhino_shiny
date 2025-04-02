@@ -7,7 +7,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     libgdal-dev \
     libproj-dev \
     libudunits2-dev \
-    sudo
+    sudo \
+    xvfb
 
 # Install brave-browser required for shinytest2
 RUN curl -fsS https://dl.brave.com/install.sh | sh

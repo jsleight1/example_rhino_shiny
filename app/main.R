@@ -1,7 +1,8 @@
 # app/main.R
 
 box::use(
-  shiny[bootstrapPage, div, h1, moduleServer, NS],
+  htmltools[tags],
+  shiny[bootstrapPage, div, icon, h1, moduleServer, NS],
   rhino[rhinos]
 )
 box::use(
@@ -20,10 +21,13 @@ ui <- function(id) {
       table$ui(ns("table")),
       chart$ui(ns("chart"))
     ),
-    tags$button(
-      id = "help-button",
-      icon("question"),
-      onclick = "App.showHelp()"
+    div (
+      class = "help",
+      tags$button(
+        id = "help-button",
+        icon("question"),
+        onclick = "App.showHelp()"
+      )
     )
   )
 }
