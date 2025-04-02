@@ -1,8 +1,7 @@
-
 box::use(
-    rhino[app],
-    shinytest2[...],
-    testthat[...],
+  rhino[app],
+  shinytest2[...],
+  testthat[...],
 )
 
 shiny_app <- app()

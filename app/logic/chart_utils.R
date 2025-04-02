@@ -1,5 +1,4 @@
 # app/logic/chart_utils.R
-
 box::use(
   htmlwidgets[JS],
 )

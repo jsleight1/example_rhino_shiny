@@ -1,9 +1,9 @@
 # app/view/table.R
-
 box::use(
   reactable,
   shiny[div, moduleServer, NS],
 )
+
 box::use(
   app/logic/data_transformation[transform_data],
 )

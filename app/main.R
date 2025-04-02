@@ -1,10 +1,10 @@
 # app/main.R
-
 box::use(
   htmltools[tags],
-  shiny[bootstrapPage, div, icon, h1, moduleServer, NS],
-  rhino[rhinos]
+  rhino[rhinos],
+  shiny[bootstrapPage, div, h1, icon, moduleServer, NS],
 )
+
 box::use(
   app/view/chart,
   app/view/table,

@@ -1,9 +1,9 @@
 # app/view/chart.R
-
 box::use(
   echarts4r,
   shiny[div, moduleServer, NS],
 )
+
 box::use(
   app/logic/chart_utils[label_formatter],
 )
