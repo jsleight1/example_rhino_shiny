@@ -30,7 +30,7 @@ COPY --chown=app:app app app/
 # Install R dependencies
 COPY --chown=app:app .Rprofile renv.lock ./
 COPY --chown=app:app renv/activate.R renv/
-RUN sudo -u app Rscript -e 'renv::restore(clean = TRUE)'
+RUN Rscript -e 'renv::restore(clean = TRUE)'
 
 # Expose port and run shiny application
 USER app
