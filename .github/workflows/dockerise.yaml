@@ -1,7 +1,7 @@
 
 on:
   push:
-    branches: [1-initial-development]
+    branches: [main]
 
 name: dockerise.yaml
 

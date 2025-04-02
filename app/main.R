@@ -1,6 +1,7 @@
 box::use(
   htmltools[tags],
   shiny[bootstrapPage, div, h1, icon, moduleServer, NS],
+  utils[data],
 )
 
 box::use(
