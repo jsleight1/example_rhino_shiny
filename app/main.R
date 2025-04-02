@@ -1,7 +1,5 @@
-# app/main.R
 box::use(
   htmltools[tags],
-  rhino[rhinos],
   shiny[bootstrapPage, div, h1, icon, moduleServer, NS],
 )
 
@@ -9,6 +7,8 @@ box::use(
   app/view/chart,
   app/view/table,
 )
+
+data("rhinos", package = "rhino", envir = environment())
 
 #' @export
 ui <- function(id) {
@@ -21,7 +21,7 @@ ui <- function(id) {
       table$ui(ns("table")),
       chart$ui(ns("chart"))
     ),
-    div (
+    div(
       class = "help",
       tags$button(
         id = "help-button",

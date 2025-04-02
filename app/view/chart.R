@@ -1,4 +1,3 @@
-# app/view/chart.R
 box::use(
   echarts4r,
   shiny[div, moduleServer, NS],

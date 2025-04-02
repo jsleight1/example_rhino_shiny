@@ -1,4 +1,3 @@
-# app/view/table.R
 box::use(
   reactable,
   shiny[div, moduleServer, NS],
