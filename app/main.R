@@ -1,25 +1,39 @@
+# app/main.R
+
 box::use(
-  shiny[bootstrapPage, div, moduleServer, NS, renderUI, tags, uiOutput],
+  shiny[bootstrapPage, div, h1, moduleServer, NS],
+  rhino[rhinos]
+)
+box::use(
+  app/view/chart,
+  app/view/table,
 )
 
 #' @export
 ui <- function(id) {
   ns <- NS(id)
+
   bootstrapPage(
-    uiOutput(ns("message"))
+    h1("RhinoApplication"),
+    div(
+      class = "components-container",
+      table$ui(ns("table")),
+      chart$ui(ns("chart"))
+    ),
+    tags$button(
+      id = "help-button",
+      icon("question"),
+      onclick = "App.showHelp()"
+    )
   )
 }
 
 #' @export
 server <- function(id) {
   moduleServer(id, function(input, output, session) {
-    output$message <- renderUI({
-      div(
-        style = "display: flex; justify-content: center; align-items: center; height: 100vh;",
-        tags$h1(
-          tags$a("Check out Rhino docs!", href = "https://appsilon.github.io/rhino/")
-        )
-      )
-    })
+    data <- rhinos
+
+    table$server("table", data = data)
+    chart$server("chart", data = data)
   })
 }
