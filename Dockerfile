@@ -1,4 +1,5 @@
-FROM rocker/shiny:4.1.0
+ARG RVERSION=4.4.2
+FROM rocker/r-ver:$RVERSION
 
 ENV DEBIAN_FRONTEND=noninteractive
 
