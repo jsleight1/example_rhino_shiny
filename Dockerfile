@@ -7,6 +7,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     libgdal-dev \
     libproj-dev \
     libudunits2-dev \
+    libcurl4-openssl-dev \
+    libssl-dev \
     sudo \
     xvfb
 
