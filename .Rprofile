@@ -7,3 +7,9 @@ if (file.exists("renv")) {
 
 # Allow absolute module imports (relative to the app root).
 options(box.path = getwd())
+
+# Set shinyapp options
+options(
+  shiny.port = 9001,
+  shiny.host = '0.0.0.0'
+)
