@@ -77,4 +77,4 @@ jobs:
       #     start: npm run run-app
       #     project: ../tests
       #     wait-on: 'http://localhost:3333/'
-          wait-on-timeout: 60
+      #     wait-on-timeout: 60
