@@ -15,5 +15,5 @@ test_that("transform data works", {
     transform_data() |>
     expect_no_error()
   expect_s3_class(res, "tbl_df")
-  expect_snapshot_output(res)
+  expect_snapshot_output(as.data.frame(res))
 })
