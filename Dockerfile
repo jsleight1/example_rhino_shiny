@@ -33,7 +33,7 @@ RUN addgroup --system shiny && adduser --system --ingroup shiny shiny
 # Install R dependencies
 COPY --chown=shiny:shiny .Rprofile renv.lock ./
 COPY --chown=shiny:shiny renv/activate.R renv/
-RUN sudo -u shiny Rscript -e 'renv::restore(clean = TRUE)'
+RUN Rscript -e 'renv::restore(clean = TRUE)'
 
 # Copy app
 COPY --chown=shiny:shiny app.R ./
