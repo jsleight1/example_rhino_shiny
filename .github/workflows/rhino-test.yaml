@@ -72,9 +72,10 @@ jobs:
           out <- tryCatch(
             lintr::lint(file, parse_settings = FALSE, exclusions = exclusions),
             error = function(cond) {
-                # rlang::last_error()
+                print("ERRRRRRRRRRRRRRR")
             }
           )
+          rlang::last_error()
           
           
 
