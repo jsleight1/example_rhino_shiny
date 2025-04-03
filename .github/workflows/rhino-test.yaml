@@ -75,7 +75,7 @@ jobs:
 
           
           #testthat::test_dir(fs::path("tests", "testthat"))
-          #rhino::test_r()
+          rhino::test_r()
 
       # - name: Run Cypress end-to-end tests
       #   if: always()
