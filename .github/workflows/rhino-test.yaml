@@ -55,8 +55,6 @@ jobs:
           exclusions <- lintr:::normalize_exclusions(exclusions, root = "app", pattern = pattern)
 
           files <- lintr:::normalize_path(dir(path, pattern = pattern, recursive = TRUE, full.names = TRUE))
-          files
-
           files <- lintr:::drop_excluded(files, exclusions)
 
 
