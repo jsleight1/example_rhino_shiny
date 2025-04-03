@@ -61,7 +61,7 @@ jobs:
 
           system("cat /__w/example_rhino_shiny/example_rhino_shiny/app/main.R")
 
-          files <- files[c(-4, -5, -6, 7)] 
+          files <- files[c(-4, -5, -6, -7)] 
           for (file in files) {
             print(file)
             lintr::lint(file, parse_settings = FALSE, exclusions = exclusions)
