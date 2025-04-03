@@ -70,7 +70,8 @@ jobs:
 
           list.files("/usr/local/lib/R/site-library/box/mod", all.files = TRUE)
 
-          box::use(./app/logic/data_transformation[transform_data])
+          list.files("/__w/_temp", all.files = TRUE)
+          box::use(../../app/logic/data_transformation[transform_data])
 
           
           #testthat::test_dir(fs::path("tests", "testthat"))
