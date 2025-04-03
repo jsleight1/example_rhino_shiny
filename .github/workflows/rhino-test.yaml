@@ -46,7 +46,7 @@ jobs:
           paths <- c("app", "tests/testthat")
           rhino:::check_paths(paths)
 
-          rhino:::lint_dir("app"
+          rhino:::lint_dir("app")
           
           #lints <- do.call(c, lapply(paths, rhino:::lint_path))
           #print(length(lints))
