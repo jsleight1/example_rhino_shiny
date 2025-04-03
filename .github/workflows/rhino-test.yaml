@@ -46,8 +46,24 @@ jobs:
           paths <- c("app", "tests/testthat")
           rhino:::check_paths(paths)
 
-          lintr:::read_settings("path")
-          lintr::lint_dir("tests/testthat")
+
+          path <- "app"
+          lintr:::read_settings(path)
+
+          pattern <- "(?i)[.](r|rmd|qmd|rnw|rhtml|rrst|rtex|rtxt)$"
+          exclusions <- list("renv", "packrat"
+          exclusions <- lintr:::normalize_exclusions(exclusions, root = "app", pattern = pattern)
+
+          files <- lintr:::normalize_path(dir(path, pattern = pattern, recursive = TRUE, full.names = TRUE))
+          files
+
+          files <- lintr:::drop_excluded(files, exclusions)
+          files
+          
+          
+
+          
+          #lintr::lint_dir("tests/testthat")
           print(traceback())
           
           #lints <- do.call(c, lapply(paths, rhino:::lint_path))
