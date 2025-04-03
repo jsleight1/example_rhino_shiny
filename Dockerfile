@@ -27,24 +27,41 @@ ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 RUN node --version
 RUN npm --version
 
-# Run application as 'app' user.
-RUN addgroup --system app && adduser --system --ingroup app app
-RUN mkdir /home/app
-RUN chown app:app /home/app
-ENV HOME=/home/app
-WORKDIR /home/app
-
-# Copy app
-COPY --chown=app:app app.R ./
-COPY --chown=app:app config.yml ./
-COPY --chown=app:app rhino.yml ./
-COPY --chown=app:app app app/
+# Run application as 'shiny' user.
+RUN addgroup --system shiny && adduser --system --ingroup shiny shiny
 
 # Install R dependencies
-COPY --chown=app:app .Rprofile renv.lock ./
-COPY --chown=app:app renv/activate.R renv/
-RUN Rscript -e 'renv::restore(clean = TRUE)'
+COPY --chown=shiny:shiny .Rprofile renv.lock ./
+COPY --chown=shiny:shiny renv/activate.R renv/
+RUN sudo -u shiny Rscript -e 'renv::restore(clean = TRUE)'
 
-# Expose port and run shiny application
-USER app
+# Copy app
+COPY --chown=shiny:shiny app.R ./
+COPY --chown=shiny:shiny config.yml ./
+COPY --chown=shiny:shiny rhino.yml ./
+COPY --chown=shiny:shiny app app/
+
+USER shiny
 EXPOSE 9001
+
+# # Run application as 'app' user.
+# RUN addgroup --system app && adduser --system --ingroup app app
+# RUN mkdir /home/app
+# RUN chown app:app /home/app
+# ENV HOME=/home/app
+# WORKDIR /home/app
+
+# # Copy app
+# COPY --chown=app:app app.R ./
+# COPY --chown=app:app config.yml ./
+# COPY --chown=app:app rhino.yml ./
+# COPY --chown=app:app app app/
+
+# # Install R dependencies
+# COPY --chown=app:app .Rprofile renv.lock ./
+# COPY --chown=app:app renv/activate.R renv/
+# RUN Rscript -e 'renv::restore(clean = TRUE)'
+
+# # Expose port and run shiny application
+# USER app
+# EXPOSE 9001
