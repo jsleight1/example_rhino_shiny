@@ -4,10 +4,10 @@ box::use(
   utils[data],
 )
 
-# box::use(
-#   app/view/chart,
-#   app/view/table,
-# )
+box::use(
+  # app/view/chart,
+  # app/view/table,
+)
 
 data("rhinos", package = "rhino", envir = environment())
 
