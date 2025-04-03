@@ -1,4 +1,4 @@
-mARG RVERSION=4.4.2
+ARG RVERSION=4.4.2
 FROM rocker/r-ver:$RVERSION
 
 # Install system dependencies
