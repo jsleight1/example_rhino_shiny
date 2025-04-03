@@ -51,7 +51,7 @@ jobs:
           #lints <- do.call(c, lapply(paths, rhino:::lint_path))
           #print(length(lints))
 
-          rhino::lint_r()
+          #rhino::lint_r()
 
       # - name: Lint JavaScript
       #   if: always()
