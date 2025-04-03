@@ -5,7 +5,7 @@ box::use(
 )
 
 box::use(
-  # app/view/chart,
+  app/view/chart,
   # app/view/table,
 )
 
