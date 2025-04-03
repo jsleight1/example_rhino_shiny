@@ -47,6 +47,8 @@ jobs:
           rhino:::check_paths(paths)
 
           lintr:::read_settings("path")
+          lintr::lint_dir("tests/testthat")
+          traceback()
           
           #lints <- do.call(c, lapply(paths, rhino:::lint_path))
           #print(length(lints))
