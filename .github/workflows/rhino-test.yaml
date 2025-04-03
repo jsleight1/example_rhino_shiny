@@ -40,84 +40,39 @@ jobs:
       - name: Lint R
         if: always()
         shell: Rscript {0}
-        run: |
-          library(lintr)
-          sessionInfo()
-          getwd()
-          list.files(all.files = TRUE)
-          paths <- c("app", "tests/testthat")
-          rhino:::check_paths(paths)
-          rhino::lint_r()
-          
+        run: rhino::lint_r()
 
+      - name: Lint JavaScript
+        if: always()
+        shell: Rscript {0}
+        run: rhino::lint_js()
 
-          # path <- "app"
-          # lintr:::read_settings(path)
+      - name: Lint Sass
+        if: always()
+        shell: Rscript {0}
+        run: rhino::lint_sass()
 
-          # pattern <- "(?i)[.](r|rmd|qmd|rnw|rhtml|rrst|rtex|rtxt)$"
-          # exclusions <- list("renv", "packrat")
-          # exclusions <- lintr:::normalize_exclusions(exclusions, root = "app", pattern = pattern)
+      - name: Build JavaScript
+        if: always()
+        shell: Rscript {0}
+        run: rhino::build_js()
 
-          # files <- lintr:::normalize_path(dir(path, pattern = pattern, recursive = TRUE, full.names = TRUE))
-          # files <- lintr:::drop_excluded(files, exclusions)
+      - name: Build Sass
+        if: always()
+        shell: Rscript {0}
+        run: rhino::build_sass()
 
+      - name: Run R unit tests
+        if: always()
+        shell: Rscript {0}
+        run: rhino::test_r()
 
-          # system("cat /__w/example_rhino_shiny/example_rhino_shiny/app/main.R")
-
-          # for (file in files) {
-          #   print(file)
-          #   lintr::lint(file, parse_settings = FALSE, exclusions = exclusions)
-          # }
-
-          # file <- "/__w/example_rhino_shiny/example_rhino_shiny/app/main.R"
-          # out <- tryCatch(
-          #   lintr::lint(file, parse_settings = FALSE, exclusions = exclusions),
-          #   error = function(cond) {
-          #       print("ERRRRRRRRRRRRRRR")
-          #   }
-          # )
-
-
-          
-          #lintr::lint_dir("tests/testthat")
-          #print(traceback())
-          
-          #lints <- do.call(c, lapply(paths, rhino:::lint_path))
-          #print(length(lints))
-
-          #rhino::lint_r()
-
-      # - name: Lint JavaScript
-      #   if: always()
-      #   shell: Rscript {0}
-      #   run: rhino::lint_js()
-
-      # - name: Lint Sass
-      #   if: always()
-      #   shell: Rscript {0}
-      #   run: rhino::lint_sass()
-
-      # - name: Build JavaScript
-      #   if: always()
-      #   shell: Rscript {0}
-      #   run: rhino::build_js()
-
-      # - name: Build Sass
-      #   if: always()
-      #   shell: Rscript {0}
-      #   run: rhino::build_sass()
-
-      # - name: Run R unit tests
-      #   if: always()
-      #   shell: Rscript {0}
-      #   run: rhino::test_r()
-
-      # - name: Run Cypress end-to-end tests
-      #   if: always()
-      #   uses: cypress-io/github-action@v6
-      #   with:
-      #     working-directory: .rhino # Created by earlier commands which use Node.js
-      #     start: npm run run-app
-      #     project: ../tests
-      #     wait-on: 'http://localhost:3333/'
-      #     wait-on-timeout: 60
+      - name: Run Cypress end-to-end tests
+        if: always()
+        uses: cypress-io/github-action@v6
+        with:
+          working-directory: .rhino # Created by earlier commands which use Node.js
+          start: npm run run-app
+          project: ../tests
+          wait-on: 'http://localhost:3333/'
+          wait-on-timeout: 60
