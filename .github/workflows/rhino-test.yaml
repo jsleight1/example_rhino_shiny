@@ -68,7 +68,7 @@ jobs:
         run: |
           list.files(all.files = TRUE)
 
-          list.files(“/usr/local/lib/R/site-library/box/mod”, all.files = TRUE)
+          list.files("/usr/local/lib/R/site-library/box/mod", all.files = TRUE)
 
           #box::use(app/logic/data_transformation[transform_data])
 
