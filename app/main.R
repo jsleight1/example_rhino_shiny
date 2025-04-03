@@ -4,34 +4,34 @@ box::use(
   utils[data],
 )
 
-box::use(
-  app/view/chart,
-  app/view/table,
-)
+# box::use(
+#   app/view/chart,
+#   app/view/table,
+# )
 
 data("rhinos", package = "rhino", envir = environment())
 
-# #' @export
-# ui <- function(id) {
-#   ns <- NS(id)
+#' @export
+ui <- function(id) {
+  ns <- NS(id)
 
-#   bootstrapPage(
-#     h1("RhinoApplication"),
-#     div(
-#       class = "components-container",
-#       table$ui(ns("table")),
-#       chart$ui(ns("chart"))
-#     ),
-#     div(
-#       class = "help",
-#       tags$button(
-#         id = "help-button",
-#         icon("question"),
-#         onclick = "App.showHelp()"
-#       )
-#     )
-#   )
-# }
+  bootstrapPage(
+    h1("RhinoApplication"),
+    div(
+      class = "components-container",
+      table$ui(ns("table")),
+      chart$ui(ns("chart"))
+    ),
+    div(
+      class = "help",
+      tags$button(
+        id = "help-button",
+        icon("question"),
+        onclick = "App.showHelp()"
+      )
+    )
+  )
+}
 
 # #' @export
 # server <- function(id) {
