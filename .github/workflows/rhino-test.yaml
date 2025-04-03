@@ -42,13 +42,13 @@ jobs:
         shell: Rscript {0}
         run: |
           getwd()
-          list.files()
+          list.files(all.files = TRUE)
           paths <- c("app", "tests/testthat")
           rhino:::check_paths(paths)
 
           lintr:::read_settings("path")
           lintr::lint_dir("tests/testthat")
-          traceback()
+          print(traceback())
           
           #lints <- do.call(c, lapply(paths, rhino:::lint_path))
           #print(length(lints))
