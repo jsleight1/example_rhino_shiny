@@ -33,12 +33,12 @@ ui <- function(id) {
   )
 }
 
-# #' @export
-# server <- function(id) {
-#   moduleServer(id, function(input, output, session) {
-#     data <- rhinos
+#' @export
+server <- function(id) {
+  moduleServer(id, function(input, output, session) {
+    data <- rhinos
 
-#     table$server("table", data = data)
-#     chart$server("chart", data = data)
-#   })
-# }
+    table$server("table", data = data)
+    chart$server("chart", data = data)
+  })
+}
