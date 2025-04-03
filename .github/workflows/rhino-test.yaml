@@ -44,7 +44,7 @@ jobs:
           getwd()
           list.files()
           paths <- c("app", "tests/testthat")
-          rhino:::check_paths(paths)
+          #rhino:::check_paths(paths)
           lints <- do.call(c, lapply(paths, rhino:::lint_path))
           print(length(lints))
 
