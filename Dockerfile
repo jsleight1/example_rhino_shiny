@@ -45,6 +45,9 @@ COPY --chown=app:app renv.lock ./
 RUN Rscript -e "install.packages('renv')"
 RUN Rscript -e 'renv::restore()'
 
+# Create .Rprofile
+RUN echo -e "options(shiny.port = 9001, shiny.host = '0.0.0.0')" > .Rprofile
+
 # Expose port and run shiny application
 USER app
 EXPOSE 9001
