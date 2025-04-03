@@ -3,7 +3,7 @@ box::use(
 )
 
 box::use(
-  app/logic/data_transformation[transform_data],
+  ../app/logic/data_transformation[transform_data],
 )
 
 data("rhinos", package = "rhino", envir = environment())
