@@ -1,15 +1,15 @@
-box::use(
-  htmltools[tags],
-  shiny[bootstrapPage, div, h1, icon, moduleServer, NS],
-  utils[data],
-)
+# box::use(
+#   htmltools[tags],
+#   shiny[bootstrapPage, div, h1, icon, moduleServer, NS],
+#   utils[data],
+# )
 
-box::use(
-  app/view/chart,
-  app/view/table,
-)
+# box::use(
+#   app/view/chart,
+#   app/view/table,
+# )
 
-data("rhinos", package = "rhino", envir = environment())
+# data("rhinos", package = "rhino", envir = environment())
 
 # #' @export
 # ui <- function(id) {
