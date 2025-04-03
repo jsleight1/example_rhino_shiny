@@ -41,23 +41,23 @@ jobs:
         if: always()
         shell: Rscript {0}
         run: |
-          # library(lintr)
-          # sessionInfo()
-          # getwd()
-          # list.files(all.files = TRUE)
-          # paths <- c("app", "tests/testthat")
-          # rhino:::check_paths(paths)
+          library(lintr)
+          sessionInfo()
+          getwd()
+          list.files(all.files = TRUE)
+          paths <- c("app", "tests/testthat")
+          rhino:::check_paths(paths)
 
 
-          # path <- "app"
-          # lintr:::read_settings(path)
+          path <- "app"
+          lintr:::read_settings(path)
 
-          # pattern <- "(?i)[.](r|rmd|qmd|rnw|rhtml|rrst|rtex|rtxt)$"
-          # exclusions <- list("renv", "packrat")
-          # exclusions <- lintr:::normalize_exclusions(exclusions, root = "app", pattern = pattern)
+          pattern <- "(?i)[.](r|rmd|qmd|rnw|rhtml|rrst|rtex|rtxt)$"
+          exclusions <- list("renv", "packrat")
+          exclusions <- lintr:::normalize_exclusions(exclusions, root = "app", pattern = pattern)
 
-          # files <- lintr:::normalize_path(dir(path, pattern = pattern, recursive = TRUE, full.names = TRUE))
-          # files <- lintr:::drop_excluded(files, exclusions)
+          files <- lintr:::normalize_path(dir(path, pattern = pattern, recursive = TRUE, full.names = TRUE))
+          files <- lintr:::drop_excluded(files, exclusions)
 
 
           # system("cat /__w/example_rhino_shiny/example_rhino_shiny/app/main.R")
