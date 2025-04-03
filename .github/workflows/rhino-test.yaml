@@ -51,7 +51,7 @@ jobs:
           lintr:::read_settings(path)
 
           pattern <- "(?i)[.](r|rmd|qmd|rnw|rhtml|rrst|rtex|rtxt)$"
-          exclusions <- list("renv", "packrat"
+          exclusions <- list("renv", "packrat")
           exclusions <- lintr:::normalize_exclusions(exclusions, root = "app", pattern = pattern)
 
           files <- lintr:::normalize_path(dir(path, pattern = pattern, recursive = TRUE, full.names = TRUE))
