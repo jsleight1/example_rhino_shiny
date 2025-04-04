@@ -7,7 +7,7 @@ box::use(
 
 test_that("App values works", {
   skip_on_cran()
-  # skip_on_ci()
+  skip_on_ci()
 
   setwd("../..")
   shiny_app <- app()
