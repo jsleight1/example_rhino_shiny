@@ -1,0 +1,720 @@
+{
+  "input": {
+
+  },
+  "output": {
+    "app-chart-chart": {
+      "x": {
+        "theme": "",
+        "tl": false,
+        "draw": true,
+        "renderer": "canvas",
+        "events": [
+
+        ],
+        "buttons": [
+
+        ],
+        "opts": {
+          "yAxis": [
+            {
+              "show": true
+            }
+          ],
+          "xAxis": [
+            {
+              "type": "value",
+              "axisLabel": {
+                "formatter": "(value, index) => value"
+              },
+              "min": 1960,
+              "max": 2017
+            }
+          ],
+          "legend": {
+            "data": [
+              "Black Rhino",
+              "Indian Rhino",
+              "Javan Rhino",
+              "Southern White Rhino",
+              "Sumatran Rhino"
+            ]
+          },
+          "series": [
+            {
+              "data": [
+                {
+                  "value": [
+                    1960,
+                    100000
+                  ]
+                },
+                {
+                  "value": [
+                    1970,
+                    65000
+                  ]
+                },
+                {
+                  "value": [
+                    1980,
+                    14785
+                  ]
+                },
+                {
+                  "value": [
+                    1984,
+                    8800
+                  ]
+                },
+                {
+                  "value": [
+                    1987,
+                    3665
+                  ]
+                },
+                {
+                  "value": [
+                    1991,
+                    3450
+                  ]
+                },
+                {
+                  "value": [
+                    1992,
+                    2475
+                  ]
+                },
+                {
+                  "value": [
+                    1993,
+                    2550
+                  ]
+                },
+                {
+                  "value": [
+                    1995,
+                    2410
+                  ]
+                },
+                {
+                  "value": [
+                    2005,
+                    3726
+                  ]
+                },
+                {
+                  "value": [
+                    2010,
+                    4880
+                  ]
+                },
+                {
+                  "value": [
+                    2012,
+                    4845
+                  ]
+                },
+                {
+                  "value": [
+                    2015,
+                    5214
+                  ]
+                },
+                {
+                  "value": [
+                    2017,
+                    5495
+                  ]
+                }
+              ],
+              "yAxisIndex": 0,
+              "xAxisIndex": 0,
+              "name": "Black Rhino",
+              "type": "line",
+              "coordinateSystem": "cartesian2d"
+            },
+            {
+              "data": [
+                {
+                  "value": [
+                    1910,
+                    40
+                  ]
+                },
+                {
+                  "value": [
+                    1966,
+                    40
+                  ]
+                },
+                {
+                  "value": [
+                    1972,
+                    670
+                  ]
+                },
+                {
+                  "value": [
+                    1980,
+                    1250
+                  ]
+                },
+                {
+                  "value": [
+                    1986,
+                    1711
+                  ]
+                },
+                {
+                  "value": [
+                    2007,
+                    2565
+                  ]
+                },
+                {
+                  "value": [
+                    2009,
+                    2800
+                  ]
+                },
+                {
+                  "value": [
+                    2016,
+                    3557
+                  ]
+                },
+                {
+                  "value": [
+                    2018,
+                    3588
+                  ]
+                }
+              ],
+              "yAxisIndex": 0,
+              "xAxisIndex": 0,
+              "name": "Indian Rhino",
+              "type": "line",
+              "coordinateSystem": "cartesian2d"
+            },
+            {
+              "data": [
+                {
+                  "value": [
+                    1965,
+                    25
+                  ]
+                },
+                {
+                  "value": [
+                    1975,
+                    30
+                  ]
+                },
+                {
+                  "value": [
+                    1980,
+                    50
+                  ]
+                },
+                {
+                  "value": [
+                    1985,
+                    60
+                  ]
+                },
+                {
+                  "value": [
+                    1990,
+                    60
+                  ]
+                },
+                {
+                  "value": [
+                    1995,
+                    50
+                  ]
+                },
+                {
+                  "value": [
+                    2000,
+                    45
+                  ]
+                },
+                {
+                  "value": [
+                    2005,
+                    40
+                  ]
+                },
+                {
+                  "value": [
+                    2007,
+                    50
+                  ]
+                },
+                {
+                  "value": [
+                    2009,
+                    41
+                  ]
+                },
+                {
+                  "value": [
+                    2010,
+                    40
+                  ]
+                },
+                {
+                  "value": [
+                    2013,
+                    58
+                  ]
+                },
+                {
+                  "value": [
+                    2018,
+                    66
+                  ]
+                }
+              ],
+              "yAxisIndex": 0,
+              "xAxisIndex": 0,
+              "name": "Javan Rhino",
+              "type": "line",
+              "coordinateSystem": "cartesian2d"
+            },
+            {
+              "data": [
+                {
+                  "value": [
+                    1895,
+                    20
+                  ]
+                },
+                {
+                  "value": [
+                    1929,
+                    150
+                  ]
+                },
+                {
+                  "value": [
+                    1948,
+                    550
+                  ]
+                },
+                {
+                  "value": [
+                    1968,
+                    1800
+                  ]
+                },
+                {
+                  "value": [
+                    1984,
+                    3800
+                  ]
+                },
+                {
+                  "value": [
+                    1987,
+                    4665
+                  ]
+                },
+                {
+                  "value": [
+                    1991,
+                    5565
+                  ]
+                },
+                {
+                  "value": [
+                    1992,
+                    5790
+                  ]
+                },
+                {
+                  "value": [
+                    1993,
+                    6760
+                  ]
+                },
+                {
+                  "value": [
+                    1995,
+                    7530
+                  ]
+                },
+                {
+                  "value": [
+                    2005,
+                    14543
+                  ]
+                },
+                {
+                  "value": [
+                    2010,
+                    20160
+                  ]
+                },
+                {
+                  "value": [
+                    2012,
+                    21316
+                  ]
+                },
+                {
+                  "value": [
+                    2015,
+                    20053
+                  ]
+                },
+                {
+                  "value": [
+                    2017,
+                    18064
+                  ]
+                }
+              ],
+              "yAxisIndex": 0,
+              "xAxisIndex": 0,
+              "name": "Southern White Rhino",
+              "type": "line",
+              "coordinateSystem": "cartesian2d"
+            },
+            {
+              "data": [
+                {
+                  "value": [
+                    1985,
+                    600
+                  ]
+                },
+                {
+                  "value": [
+                    1995,
+                    300
+                  ]
+                },
+                {
+                  "value": [
+                    2007,
+                    280
+                  ]
+                },
+                {
+                  "value": [
+                    2009,
+                    220
+                  ]
+                },
+                {
+                  "value": [
+                    2013,
+                    100
+                  ]
+                },
+                {
+                  "value": [
+                    2016,
+                    76
+                  ]
+                },
+                {
+                  "value": [
+                    2018,
+                    59
+                  ]
+                }
+              ],
+              "yAxisIndex": 0,
+              "xAxisIndex": 0,
+              "name": "Sumatran Rhino",
+              "type": "line",
+              "coordinateSystem": "cartesian2d"
+            }
+          ],
+          "tooltip": {
+            "trigger": "item"
+          }
+        },
+        "dispose": true
+      },
+      "evals": [
+        "opts.xAxis.0.axisLabel.formatter"
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+
+      ]
+    },
+    "app-table-table": {
+      "x": {
+        "tag": {
+          "name": "Reactable",
+          "attribs": {
+            "data": {
+              "Year": [
+                1960,
+                1970,
+                1980,
+                1984,
+                1987,
+                1991,
+                1992,
+                1993,
+                1995,
+                2005,
+                2010,
+                2012,
+                2015,
+                2017,
+                1910,
+                1966,
+                1972,
+                1986,
+                2007,
+                2009,
+                2016,
+                2018,
+                1965,
+                1975,
+                1985,
+                1990,
+                2000,
+                2013,
+                1895,
+                1929,
+                1948,
+                1968
+              ],
+              "Black Rhino": [
+                100000,
+                65000,
+                14785,
+                8800,
+                3665,
+                3450,
+                2475,
+                2550,
+                2410,
+                3726,
+                4880,
+                4845,
+                5214,
+                5495,
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA"
+              ],
+              "Indian Rhino": [
+                "NA",
+                "NA",
+                1250,
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                40,
+                40,
+                670,
+                1711,
+                2565,
+                2800,
+                3557,
+                3588,
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA"
+              ],
+              "Javan Rhino": [
+                "NA",
+                "NA",
+                50,
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                50,
+                40,
+                40,
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                50,
+                41,
+                "NA",
+                66,
+                25,
+                30,
+                60,
+                60,
+                45,
+                58,
+                "NA",
+                "NA",
+                "NA",
+                "NA"
+              ],
+              "Southern White Rhino": [
+                "NA",
+                "NA",
+                "NA",
+                3800,
+                4665,
+                5565,
+                5790,
+                6760,
+                7530,
+                14543,
+                20160,
+                21316,
+                20053,
+                18064,
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                20,
+                150,
+                550,
+                1800
+              ],
+              "Sumatran Rhino": [
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                300,
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                "NA",
+                280,
+                220,
+                76,
+                59,
+                "NA",
+                "NA",
+                600,
+                "NA",
+                "NA",
+                100,
+                "NA",
+                "NA",
+                "NA",
+                "NA"
+              ]
+            },
+            "columns": [
+              {
+                "id": "Year",
+                "name": "Year",
+                "type": "numeric"
+              },
+              {
+                "id": "Black Rhino",
+                "name": "Black Rhino",
+                "type": "numeric"
+              },
+              {
+                "id": "Indian Rhino",
+                "name": "Indian Rhino",
+                "type": "numeric"
+              },
+              {
+                "id": "Javan Rhino",
+                "name": "Javan Rhino",
+                "type": "numeric"
+              },
+              {
+                "id": "Southern White Rhino",
+                "name": "Southern White Rhino",
+                "type": "numeric"
+              },
+              {
+                "id": "Sumatran Rhino",
+                "name": "Sumatran Rhino",
+                "type": "numeric"
+              }
+            ],
+            "dataKey": "d459070c9588218cbcaf5e3b6d54328a",
+            "static": false
+          },
+          "children": [
+
+          ]
+        },
+        "class": "reactR_markup"
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}
