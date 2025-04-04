@@ -51,3 +51,4 @@ RUN echo "options(shiny.port = 9001, shiny.host = '0.0.0.0')" > .Rprofile
 # Expose port and run shiny application
 USER app
 EXPOSE 9001
+CMD ["R", "-e", "rhino::app()"]
